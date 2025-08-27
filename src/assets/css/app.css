@@ -1,0 +1,82 @@
+/* Default Styles - Rules */
+
+*, *::before, *::after {
+    margin: 0rem;
+    padding: 0rem;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --light: #ffffff;
+    --dark: #131313;
+    --gray: #808080;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.viewport {
+    width: 100%;
+    min-width: 41.4rem;
+    max-width: 145.0rem;
+    margin-inline: auto;
+}
+
+/* Navigation System */
+
+header {
+    padding: 2.0rem;
+}
+
+.navigation {
+    width: 100%;
+    max-width: 90.0rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0rem 0.2rem 0.7rem rgba(0, 0, 0, 0.3);
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+}
+
+.menu-wrapper {
+    border: 0.1rem solid var(--dark);
+    padding: 0.3rem 0.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.menu-properties {
+    width: 3.5rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.menu-open {
+    background-image: url("../images/bars.png");
+}
+
+.menu-close {
+    background-image: url("../images/cross.png");
+    display: none;
+}
