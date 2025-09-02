@@ -91,7 +91,7 @@ header {
     text-align: center;
 }
 
-.hero-heading h1, p {
+.hero-heading h1 {
     color: var(--green);
 }
 
@@ -140,3 +140,66 @@ header {
 
 /* Main System */
 
+main {
+    padding: 2.0rem;
+}
+
+.main-filler-content {
+    padding: 2.0rem 1.0rem;
+    border: 0.2rem solid var(--green);
+    border-radius: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-filler-content h1 {
+    color: var(--gray);
+}
+
+.main-filler-content h1 {
+    margin-bottom: 1.0rem;
+}
+
+.main-filler-content p {
+    text-transform: capitalize;
+}
+
+.main-practice-schema {
+    margin-top: 3.0rem;
+}
+
+.main-block {
+    text-align: center;
+    padding: 1.0rem;
+    margin-bottom: 3.0rem;
+}
+
+.session-block {
+    width: 100%;
+}
+
+.session-block th, td {
+    padding: 1.5rem;
+}
+
+.session-block li {
+    padding: 1.5rem 0rem;
+}
+
+.session-day th, .session-overview th {
+    color: var(--gray);
+}
+
+.session-lesson th, .session-schema th {
+    border-radius: 0.7rem;
+}
+
+.session-lesson {
+    background-color: var(--gray);
+    color: var(--light);
+}
+
+.session-schema {
+    background-color: var(--green);
+    color: var(--light);
+}
