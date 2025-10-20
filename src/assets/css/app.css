@@ -1,63 +1,90 @@
 /* Default Styles - Rules */
 
-*, *::before, *::after {
-    margin: 0rem;
-    padding: 0rem;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    list-style-type: none;
-    box-sizing: border-box;
-}
-
 :root {
     --light: #ffffff;
     --dark: #131313;
-    --gray: #808080;
-    --green: green;
+    --dark-alpha: #1313134d;
+    --gray: #7a7a78;
+    --light-gray: #c8c8c3;
+    --green: #1c4538;
+    --green-alpha: #1c45384d;
 }
 
 html {
     font-size: 62.5%;
     font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     font-size: 1.6rem;
+    margin: 0rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    margin: 0rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 .viewport {
     width: 100%;
     min-width: 41.4rem;
-    max-width: 145.0rem;
+    max-width: 205.0rem;
     margin-inline: auto;
 }
 
 /* Navigation System */
 
 header {
-    padding: 2.0rem;
+    padding: 2.0rem 0rem 0rem;
+    background-image: url("../images/background_cover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
 }
 
 .navigation {
-    width: 100%;
+    width: 90%;
     max-width: 90.0rem;
+    background-color: var(--light-gray);
     margin-inline: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0rem 0.2rem 0.7rem rgba(0, 0, 0, 0.3);
     border-radius: 5rem;
     padding: 1rem 2rem;
 }
 
+.logo {
+    display: inline-block;
+    width: 10%;
+    color: var(--green);
+    font-weight: bold;
+}
+
 .menu-wrapper {
-    border: 0.1rem solid var(--dark);
-    padding: 0.3rem 0.3rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
+    color: var(--green);
+    font-weight: bold;
 }
 
 .menu-properties {
@@ -80,63 +107,37 @@ header {
 /* Hero System */
 
 .hero {
-    margin-top: 6.0rem;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 1.6rem;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
 }
 
-.hero-heading {
-    text-align: center;
+.hero-logo {
+    width: 30%;
+    position: relative;
+    top: 40%;
 }
 
-.hero-heading h1 {
-    color: var(--green);
+.hero-wrestling {
+    width: 45%;
+    position: relative;
+    top: 210%;
+    z-index: 1;
 }
 
-.hero-heading h1 {
-    font-size: clamp(4.0rem, 6vw, 9.0rem);
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 1.0rem;
-}
-
-.hero-heading p {
-    font-size: clamp(1.6rem, 2vw, 3.0rem);
-    text-transform: capitalize;
-    margin-bottom: 4.5rem;
+.hero-chevron {
+    position: relative;
+    top: -30%;
 }
 
 .hero-media {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 1.5rem;
+    position: relative;
+    top: -30%;
+    z-index: 1;
 }
 
-.hero-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-@media screen and (min-width: 1000px) {
-    .hero {
-        margin-top: 12.0rem;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        align-items: center;
-    }
-
-    .hero-heading {
-        text-align: left;
-    }
-
-    .hero-heading h1 {
-        margin-bottom: 1.0rem;
-    }
-}
+@media screen and (min-width: 1000px) {}
 
 /* Main System */
 
@@ -144,62 +145,63 @@ main {
     padding: 2.0rem;
 }
 
-.main-filler-content {
-    padding: 2.0rem 1.0rem;
-    border: 0.2rem solid var(--green);
-    border-radius: 0.8rem;
+.main-banner {
+    margin: 5rem auto 0rem;
+    box-shadow: 0.4rem 0.3rem 1.2rem var(--green-alpha);
+    padding: 3rem;
+    border-radius: 1rem;
     text-align: center;
     text-transform: uppercase;
 }
 
-.main-filler-content h1 {
-    color: var(--gray);
+@media screen and (min-width: 1680px) {
+    .main-banner {
+        max-width: 35%;
+    }
 }
 
-.main-filler-content h1 {
+.main-banner h1 {
+    color: var(--green);
     margin-bottom: 1.0rem;
+    font-size: 3.35rem;
+    font-weight: 900;
 }
 
-.main-filler-content p {
+.main-banner p {
+    color: var(--gray);
     text-transform: capitalize;
+    font-size: 1.8rem;
+    letter-spacing: 0.15rem;
 }
 
 .main-practice-schema {
-    margin-top: 3.0rem;
+    margin-top: 7rem;
 }
 
-.main-block {
-    text-align: center;
-    padding: 1.0rem;
-    margin-bottom: 3.0rem;
+.main-practice-warmup-wrapper {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.3rem 1.2rem var(--dark-alpha);
 }
 
-.session-block {
-    width: 100%;
+.main-practice-warmup-wrapper > h1 {
+    color: var(--green);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
-.session-block th, td {
-    padding: 1.5rem;
+/* .main-practice-drills-wrapper {} */
+
+.main-practice-drills-wrapper > ol {
+    padding-left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 }
 
-.session-block li {
-    padding: 1.5rem 0rem;
-}
-
-.session-day th, .session-overview th {
+.main-practice-drills-wrapper li {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
     color: var(--gray);
-}
-
-.session-lesson th, .session-schema th {
-    border-radius: 0.7rem;
-}
-
-.session-lesson {
-    background-color: var(--gray);
-    color: var(--light);
-}
-
-.session-schema {
-    background-color: var(--green);
-    color: var(--light);
+    text-transform: capitalize;
 }
